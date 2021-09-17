@@ -11,8 +11,7 @@ for job in jobs:
     if publised_date == "Posted few days ago":
         company_name = job.find('h3', class_='joblist-comp-name').text.replace(' ', '')
         skills = job.find('span', class_='srp-skills').text.replace(' ', '')
-        print(f'''
-            Company Name: {company_name}
-            Required Skills: {skills}
-            Published Date: {publised_date}
-        ''')
+        print(f"Company Name: {company_name.strip()}")
+        print(f"Required Skills: {skills.strip()}")
+
+        print('')
